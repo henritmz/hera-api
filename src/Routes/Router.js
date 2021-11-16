@@ -1,9 +1,14 @@
+const swaggerUi = require('swagger-ui-express')
+const swaggerDocument = require ('../../swagger.json')
+
 const { Router } = require('express')
 
 const CursoController = require('../Controllers/CursoController')
 const ContatoController = require('../Controllers/ContatoController')
 
 const routes = Router()
+
+routes.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 routes.get('/cursos', CursoController.read)
 routes.get('/cursos/id=:id', CursoController.readOne)

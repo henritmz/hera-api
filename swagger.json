@@ -1,0 +1,89 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API para cadastro de cursos e contatos",
+    "version": "1.0.0",
+    "title": "Hera API",
+    "termsOfService": "",
+    "contact": {
+      "email": "anderson.s.antunes@kroton.com.br"
+    }
+  },
+  "host": "https://heraapi.herokuapp.com/",
+  "tags": [
+    {
+      "name": "Cursos"
+    }
+  ],
+  "schemes": "https",
+  "paths": {
+    "/cursos": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "summary": "Buscar Cursos"
+      },
+      "post": {
+        "tags": [
+          "Cursos"
+        ],
+        "summary": "Adicionar Curso"
+      }
+    },
+    "/Cursos/id={cursoId}": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "summary": "Busca Curso por ID"
+      },
+      "delete": {
+        "tags": [
+          "Cursos"
+        ],
+        "summary": "Deletar Curso por ID"
+      },
+      "put": {
+        "tags": [
+          "Cursos"
+        ],
+        "summary": "Atualizar o Curso por ID"
+      }
+    },
+    "/contatos": {
+      "get": {
+        "tags": [
+          "Contatos"
+        ],
+        "summary": "Buscar Contatos"
+      },
+      "post": {
+        "tags": [
+          "Contatos"
+        ],
+        "summary": "Adicionar novo Contato"
+      }
+    },
+    "/contatos/id={contatoId}": {
+      "get": {
+        "tags": [
+          "Contatos"
+        ],
+        "summary": "Busca Contato pelo ID"
+      },
+      "delete": {
+        "tags": [
+          "Contatos"
+        ],
+        "summary": "Deletar Contato por ID"
+      },
+      "put": {
+        "tags": [
+          "Contatos"
+        ],
+        "summary": "Atualizar Contato por ID"
+      }
+    }
+  }
+}
