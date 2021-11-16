@@ -46,6 +46,10 @@ const Schema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    cursoID: {
+        type: String,
+        required: true,
+    },
     status: {
         enum:['NOVO', 'EM_ATENDIMENTO', 'CONTRATADO', 'DESISTENTE'],
         type: String,
