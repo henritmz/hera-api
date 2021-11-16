@@ -31,7 +31,7 @@
         "summary": "Adicionar Curso"
       }
     },
-    "/Cursos/id={cursoId}": {
+    "/cursos/id={cursoId}": {
       "get": {
         "tags": [
           "Cursos"
