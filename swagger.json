@@ -31,7 +31,7 @@
         "summary": "Adicionar Curso"
       }
     },
-    "/cursos/id={cursoId}": {
+    "/cursos/id={curso Id}": {
       "get": {
         "tags": [
           "Cursos"
@@ -65,7 +65,7 @@
         "summary": "Adicionar novo Contato"
       }
     },
-    "/contatos/id={contatoId}": {
+    "/contatos/id={contato Id}": {
       "get": {
         "tags": [
           "Contatos"
