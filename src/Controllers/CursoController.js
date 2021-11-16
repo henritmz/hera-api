@@ -10,7 +10,8 @@ const categorias = [
 module.exports = {
 	async read(req, res) {
 		const curso = await Curso.find();
-		curso == [] ? (res.json({ message: "Não há cursos registrados." })):(res.status(200).json(curso))
+		console.log(curso.length)
+		!curso.length >= 1  ? (res.json({ message: "Não há cursos registrados." })):(res.status(200).json(curso))
 	},
 
 	async readOne(req, res) {

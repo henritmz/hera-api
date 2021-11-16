@@ -4,7 +4,7 @@ const Contato = require('../Models/Contato')
 module.exports = {
     async read(req, res){
         const contato = await Contato.find();
-        contato == [] ? res.json({ message: "Não há contatos registrados." }):res.status(200).json(contato)
+        !contato.length >= 1 ? res.json({ message: "Não há contatos registrados." }):res.status(200).json(contato)
     },
 
     async readOne(req, res) {
