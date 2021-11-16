@@ -10,11 +10,11 @@ const dbUri = process.env.DB_URI
 mongoose.connect(dbUri, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-}, () => console.log('Connected to database'))
+})
 
 app.use(cors())
 
 app.use(express.json())
 app.use(router)
 
-app.listen(app.listen(process.env.PORT || 3333, ()=> console.log('Server running on port 3333')))
+app.listen(app.listen(process.env.PORT || 3333))

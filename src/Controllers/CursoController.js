@@ -10,7 +10,6 @@ const categorias = [
 module.exports = {
 	async read(req, res) {
 		const curso = await Curso.find();
-		console.log(curso.length)
 		!curso.length >= 1  ? (res.json({ message: "Não há cursos registrados." })):(res.status(200).json(curso))
 	},
 
@@ -47,7 +46,6 @@ module.exports = {
 	},
 
 	async delete(req, res) {
-		console.log(req.params.id)
 		const curso_id = await Curso.findById(req.params.id)
 
 		if (curso_id == null) {
